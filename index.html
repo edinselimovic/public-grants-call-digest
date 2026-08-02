@@ -17,7 +17,17 @@ h1 { font-size:1.4rem; margin:0 0 .2rem }
 .meta { color:var(--muted); font-size:.85rem; margin-bottom:1rem }
 #search { width:100%; padding:.6rem .8rem; font-size:1rem; border-radius:10px;
           border:1px solid var(--muted); background:var(--card); color:var(--fg);
-          margin-bottom:1.4rem }
+          margin-bottom:.6rem }
+.filters { display:flex; flex-wrap:wrap; gap:.4rem; align-items:center;
+           margin-bottom:1.4rem }
+.filters select { padding:.4rem .6rem; border-radius:8px; font-size:.85rem;
+                  border:1px solid var(--muted); background:var(--card);
+                  color:var(--fg); max-width:100% }
+.tchip { border:1px solid var(--muted); background:var(--card); color:var(--fg);
+         border-radius:999px; padding:.25rem .7rem; font-size:.8rem;
+         cursor:pointer }
+.tchip.active { background:var(--accent); border-color:var(--accent);
+                color:#fff }
 h2 { font-size:1.05rem; border-bottom:1px solid var(--card);
      padding-bottom:.3rem; margin:1.6rem 0 .6rem }
 h3 { font-size:.85rem; color:var(--muted); text-transform:uppercase;
@@ -35,238 +45,324 @@ li a.title:hover { text-decoration:underline }
 .empty { color:var(--muted); padding:2rem 0; text-align:center }
 </style></head><body><main>
 <h1>Javni pozivi i konkursi</h1>
-<p class="meta">Zadnjih 30 dana &middot; osvježeno 02.08.2026. u 13:44</p>
+<p class="meta">Zadnjih 30 dana &middot; osvježeno 02.08.2026. u 16:08</p>
 <input id="search" type="search" placeholder="Pretraga… (npr. obrt, stipendija, poticaj)">
+<div class="filters">
+<select id="pub"><option value="">Svi izvori</option><option value="FMKS (kultura i sport)">FMKS (kultura i sport)</option><option value="FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)">FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)</option><option value="FMRPO (Federalno min. razvoja, poduzetništva i obrta)">FMRPO (Federalno min. razvoja, poduzetništva i obrta)</option><option value="Fond za zaštitu okoliša FBiH">Fond za zaštitu okoliša FBiH</option><option value="Grad Tuzla">Grad Tuzla</option><option value="Vlada Federacije BiH">Vlada Federacije BiH</option><option value="Vlada Tuzlanskog kantona">Vlada Tuzlanskog kantona</option></select>
+<button class="tchip" data-topic="javni-pozivi">javni-pozivi</button>
+<button class="tchip" data-topic="rezultati">rezultati</button>
+</div>
 <section>
 <h2>02.08.2026</h2>
-<h3>Grad Tuzla</h3><ul>
-<li><a class="title" href="https://grad.tuzla.ba/vijesti/zavrseni-radovi-na-putnoj-infrastrukturi-u-naselju-ceteniste/" target="_blank" rel="noopener">Završeni radovi na putnoj infrastrukturi u naselju Četenište</a></li>
-<li><a class="title" href="https://grad.tuzla.ba/vijesti/grad-tuzla-dodijelio-345-135-km-za-58-projekata-neprofitnih-organizacija/" target="_blank" rel="noopener">Grad Tuzla dodijelio 345.135 KM za 58 projekata neprofitnih organizacija</a></li>
-<li><a class="title" href="https://grad.tuzla.ba/vijesti/saopstenje-grada-tuzle-povodom-protesta-i-zahtjeva-udruzenja-tuzla-taxi-tuzla/" target="_blank" rel="noopener">Saopštenje Grada Tuzle povodom protesta i zahtjeva Udruženja Tuzla-Taxi Tuzla</a></li>
-</ul>
-<h3>Vlada Federacije BiH</h3><ul>
-<li><a class="title" href="https://fbihvlada.gov.ba/bs/javni-poziv-za-podnosenje-prijava-za-finansiranjesufinansiranje-izgradnje-adaptacije-i-rekonstrukcije-sportske-infrastrukture-od-znacaja-za-kanton-grad-i-opstine-u-federaciji-bosne-i-herc" target="_blank" rel="noopener">Javni poziv  za podnošenje prijava za finansiranje/sufinansiranje izgradnje, adaptacije i rekonstrukcije sportske infrastrukture od značaja za kanton, grad i opštine u Federaciji BiH</a></li>
-<li><a class="title" href="https://fbihvlada.gov.ba/bs/javni-poziv-za-zakljucivanje-vansudske-nagodne-u-2025-godini" target="_blank" rel="noopener">Javni poziv za zaključivanje vansudske nagodbe u 2025. godini</a></li>
-<li><a class="title" href="https://fbihvlada.gov.ba/bs/javni-poziv-za-podnosenje-prijava-za-finansiranjesufinansiranje-projekatazahtjevainicijativaostalih-aktivnosti-od-znacaja-za-jedinice-lokalne-samouprave-u-federaciji-bih-20050" target="_blank" rel="noopener">Javni poziv za podnošenje prijava za  finansiranje/sufinansiranje projekata/zahtjeva/inicijativa/ostalih aktivnosti  od značaja za jedinice lokalne samouprave u Federaciji BiH</a></li>
-</ul>
+<div class="pubgroup"><h3>Vlada Federacije BiH</h3><ul>
+<li data-publisher="Vlada Federacije BiH" data-topics="javni-pozivi"><a class="title" href="https://fbihvlada.gov.ba/bs/javni-poziv-za-podnosenje-prijava-za-finansiranjesufinansiranje-izgradnje-adaptacije-i-rekonstrukcije-sportske-infrastrukture-od-znacaja-za-kanton-grad-i-opstine-u-federaciji-bosne-i-herc" target="_blank" rel="noopener">Javni poziv  za podnošenje prijava za finansiranje/sufinansiranje izgradnje, adaptacije i rekonstrukcije sportske infrastrukture od značaja za kanton, grad i opštine u Federaciji BiH</a></li>
+<li data-publisher="Vlada Federacije BiH" data-topics="javni-pozivi"><a class="title" href="https://fbihvlada.gov.ba/bs/javni-poziv-za-zakljucivanje-vansudske-nagodne-u-2025-godini" target="_blank" rel="noopener">Javni poziv za zaključivanje vansudske nagodbe u 2025. godini</a></li>
+<li data-publisher="Vlada Federacije BiH" data-topics="javni-pozivi"><a class="title" href="https://fbihvlada.gov.ba/bs/javni-poziv-za-podnosenje-prijava-za-finansiranjesufinansiranje-projekatazahtjevainicijativaostalih-aktivnosti-od-znacaja-za-jedinice-lokalne-samouprave-u-federaciji-bih-20050" target="_blank" rel="noopener">Javni poziv za podnošenje prijava za  finansiranje/sufinansiranje projekata/zahtjeva/inicijativa/ostalih aktivnosti  od značaja za jedinice lokalne samouprave u Federaciji BiH</a></li>
+</ul></div>
 </section>
 <section>
 <h2>31.07.2026</h2>
-<h3>Vlada Federacije BiH</h3><ul>
-<li><a class="title" href="https://fbihvlada.gov.ba/bs/federalno-ministarstvo-okolisa-i-turizma-nastavlja-aktivnosti-na-zastiti-okolisa-i-prirodnih-vrijednosti-federacije-bih-u-vezi-s-he-ulog-i-projektom-gornji-horizonti" target="_blank" rel="noopener">Federalno ministarstvo okoliša i turizma nastavlja aktivnosti na zaštiti okoliša i prirodnih vrijednosti Federacije BiH u vezi s HE Ulog i projektom Gornji horizonti</a></li>
-<li><a class="title" href="https://fbihvlada.gov.ba/bs/fmrsp-predstavljen-sajam-gledaj-sebi-posla" target="_blank" rel="noopener">FMRSP: Predstavljen Sajam „Gledaj sebi posla“</a></li>
-<li><a class="title" href="https://fbihvlada.gov.ba/bs/dopremijer-kraljevic-federacija-bih-krece-u-reformu-trzista-kapitala" target="_blank" rel="noopener">Dopremijer Kraljević: Federacija BiH kreće u reformu tržišta kapitala</a></li>
-</ul>
-<h3>Vlada Tuzlanskog kantona</h3><ul>
-<li><a class="title" href="https://vladatk.gov.ba/clanak/javni-poziv-za-prikupljanje-prijava-za-odabir-korisnika-grant-sredstava" target="_blank" rel="noopener">JAVNI POZIV za prikupljanje prijava za odabir korisnika grant sredstava</a></li>
-</ul>
+<div class="pubgroup"><h3>Vlada Tuzlanskog kantona</h3><ul>
+<li data-publisher="Vlada Tuzlanskog kantona" data-topics="javni-pozivi"><a class="title" href="https://vladatk.gov.ba/clanak/javni-poziv-za-prikupljanje-prijava-za-odabir-korisnika-grant-sredstava" target="_blank" rel="noopener">JAVNI POZIV za prikupljanje prijava za odabir korisnika grant sredstava</a></li>
+</ul></div>
 </section>
 <section>
 <h2>30.07.2026</h2>
-<h3>FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)</h3><ul>
-<li><a class="title" href="https://fmpvs.gov.ba/2026/07/30/javni-poziv-za-prikupljanje-prijava-za-kreditiranje-poljoprivrede/" target="_blank" rel="noopener">JAVNI POZIV za prikupljanje prijava za kreditiranje poljoprivrede</a></li>
-</ul>
+<div class="pubgroup"><h3>FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)</h3><ul>
+<li data-publisher="FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)" data-topics="javni-pozivi"><a class="title" href="https://fmpvs.gov.ba/2026/07/30/javni-poziv-za-prikupljanje-prijava-za-kreditiranje-poljoprivrede/" target="_blank" rel="noopener">JAVNI POZIV za prikupljanje prijava za kreditiranje poljoprivrede</a></li>
+</ul></div>
 </section>
 <section>
 <h2>27.07.2026</h2>
-<h3>Vlada Federacije BiH</h3><ul>
-<li><a class="title" href="https://fbihvlada.gov.ba/bs/javni-poziv-za-podnosenje-prijava-za-dodjelu-sredstava-utvrdenih-budzetom-fbih-za-2026-godinu-vladi-fbih-po-programu-strucna-podrska-vladi-fbih-i-radnim-tijelima-na-poziciji-tekuci-transf" target="_blank" rel="noopener">Javni poziv za podnošenje prijava po Programu - Stručna podrška Vladi FBiH i radnim tijelima na poziciji „Tekući transferi neprofitnim organizacijama – Sportske igre mladih“</a></li>
-</ul>
-<h3>Vlada Tuzlanskog kantona</h3><ul>
-<li><a class="title" href="https://vladatk.gov.ba/clanak/izmjene-i-dopune-konkursaoglasa-za-prijem-zaposlenika-u-skolama-tuzlanskog-kantona-1" target="_blank" rel="noopener">Izmjene i dopune konkursa/Oglasa za prijem zaposlenika u školama Tuzlanskog kantona</a></li>
-</ul>
+<div class="pubgroup"><h3>Vlada Federacije BiH</h3><ul>
+<li data-publisher="Vlada Federacije BiH" data-topics="javni-pozivi"><a class="title" href="https://fbihvlada.gov.ba/bs/javni-poziv-za-podnosenje-prijava-za-dodjelu-sredstava-utvrdenih-budzetom-fbih-za-2026-godinu-vladi-fbih-po-programu-strucna-podrska-vladi-fbih-i-radnim-tijelima-na-poziciji-tekuci-transf" target="_blank" rel="noopener">Javni poziv za podnošenje prijava po Programu - Stručna podrška Vladi FBiH i radnim tijelima na poziciji „Tekući transferi neprofitnim organizacijama – Sportske igre mladih“</a></li>
+</ul></div>
+<div class="pubgroup"><h3>Vlada Tuzlanskog kantona</h3><ul>
+<li data-publisher="Vlada Tuzlanskog kantona" data-topics="javni-pozivi"><a class="title" href="https://vladatk.gov.ba/clanak/izmjene-i-dopune-konkursaoglasa-za-prijem-zaposlenika-u-skolama-tuzlanskog-kantona-1" target="_blank" rel="noopener">Izmjene i dopune konkursa/Oglasa za prijem zaposlenika u školama Tuzlanskog kantona</a></li>
+</ul></div>
 </section>
 <section>
 <h2>26.07.2026</h2>
-<h3>Vlada Tuzlanskog kantona</h3><ul>
-<li><a class="title" href="https://vladatk.gov.ba/clanak/javni-poziv-za-odabir-korisnika-sredstava-sa-potrosacke-jedinice-32010004-podrska-mladima-u-2026-godini-za-subvencioniranje-kamata-namjenskih-kredita-za-stambeno-zbrinjavanje-mladih-1" target="_blank" rel="noopener">JAVNI POZIV za odabir korisnika sredstava sa potrošačke jedinice 32010004- Podrška mladima u 2026. godini za subvencioniranje kamata  namjenskih kredita za stambeno zbrinjavanje mladih</a></li>
-<li><a class="title" href="https://vladatk.gov.ba/clanak/javni-poziv-za-odabir-korisnika-sredstava-sa-potrosacke-jedinice-32010004-podrska-mladima-u-2026-godini-za-projekte-omladinskih-udruzenja-i-projekte-udruzenja-i-fondacija" target="_blank" rel="noopener">JAVNI POZIV za odabir korisnika sredstava sa potrošačke jedinice 32010004- Podrška mladima u 2026. godini za projekte omladinskih  udruženja i projekte udruženja i fondacija</a></li>
-</ul>
+<div class="pubgroup"><h3>Vlada Tuzlanskog kantona</h3><ul>
+<li data-publisher="Vlada Tuzlanskog kantona" data-topics="javni-pozivi"><a class="title" href="https://vladatk.gov.ba/clanak/javni-poziv-za-odabir-korisnika-sredstava-sa-potrosacke-jedinice-32010004-podrska-mladima-u-2026-godini-za-subvencioniranje-kamata-namjenskih-kredita-za-stambeno-zbrinjavanje-mladih-1" target="_blank" rel="noopener">JAVNI POZIV za odabir korisnika sredstava sa potrošačke jedinice 32010004- Podrška mladima u 2026. godini za subvencioniranje kamata  namjenskih kredita za stambeno zbrinjavanje mladih</a></li>
+<li data-publisher="Vlada Tuzlanskog kantona" data-topics="javni-pozivi"><a class="title" href="https://vladatk.gov.ba/clanak/javni-poziv-za-odabir-korisnika-sredstava-sa-potrosacke-jedinice-32010004-podrska-mladima-u-2026-godini-za-projekte-omladinskih-udruzenja-i-projekte-udruzenja-i-fondacija" target="_blank" rel="noopener">JAVNI POZIV za odabir korisnika sredstava sa potrošačke jedinice 32010004- Podrška mladima u 2026. godini za projekte omladinskih  udruženja i projekte udruženja i fondacija</a></li>
+</ul></div>
 </section>
 <section>
 <h2>22.07.2026</h2>
-<h3>Vlada Tuzlanskog kantona</h3><ul>
-<li><a class="title" href="https://vladatk.gov.ba/clanak/javni-poziv-za-prijavu-kandidata-za-sticanje-zvanja-instruktora-voznje-motornih-vozila-10" target="_blank" rel="noopener">Javni poziv za prijavu kandidata za sticanje zvanja instruktora vožnje motornih vozila</a></li>
-<li><a class="title" href="https://vladatk.gov.ba/clanak/ponistenje-javnog-poziva-za-subvencionisanje-boravka-djece-u-predskolskim-ustanovama-na-podrucju-tuzlanskog-kantona" target="_blank" rel="noopener">Poništenje Javnog poziva za subvencionisanje boravka djece u predškolskim ustanovama na području Tuzlanskog kantona</a></li>
-</ul>
+<div class="pubgroup"><h3>Vlada Tuzlanskog kantona</h3><ul>
+<li data-publisher="Vlada Tuzlanskog kantona" data-topics="javni-pozivi"><a class="title" href="https://vladatk.gov.ba/clanak/javni-poziv-za-prijavu-kandidata-za-sticanje-zvanja-instruktora-voznje-motornih-vozila-10" target="_blank" rel="noopener">Javni poziv za prijavu kandidata za sticanje zvanja instruktora vožnje motornih vozila</a></li>
+<li data-publisher="Vlada Tuzlanskog kantona" data-topics="javni-pozivi"><a class="title" href="https://vladatk.gov.ba/clanak/ponistenje-javnog-poziva-za-subvencionisanje-boravka-djece-u-predskolskim-ustanovama-na-podrucju-tuzlanskog-kantona" target="_blank" rel="noopener">Poništenje Javnog poziva za subvencionisanje boravka djece u predškolskim ustanovama na području Tuzlanskog kantona</a></li>
+</ul></div>
 </section>
 <section>
 <h2>20.07.2026</h2>
-<h3>Vlada Tuzlanskog kantona</h3><ul>
-<li><a class="title" href="https://vladatk.gov.ba/clanak/javni-poziv-za-podnosenje-zahtjeva-za-sufinansiranje-programskih-projekata-medija-javnog-informisanja" target="_blank" rel="noopener">Javni poziv za podnošenje zahtjeva za sufinansiranje programskih projekata medija javnog informisanja u 2026. godini</a></li>
-</ul>
+<div class="pubgroup"><h3>Vlada Tuzlanskog kantona</h3><ul>
+<li data-publisher="Vlada Tuzlanskog kantona" data-topics="javni-pozivi"><a class="title" href="https://vladatk.gov.ba/clanak/javni-poziv-za-podnosenje-zahtjeva-za-sufinansiranje-programskih-projekata-medija-javnog-informisanja" target="_blank" rel="noopener">Javni poziv za podnošenje zahtjeva za sufinansiranje programskih projekata medija javnog informisanja u 2026. godini</a></li>
+</ul></div>
+</section>
+<section>
+<h2>17.07.2026</h2>
+<div class="pubgroup"><h3>Fond za zaštitu okoliša FBiH</h3><ul>
+<li data-publisher="Fond za zaštitu okoliša FBiH" data-topics="javni-pozivi"><a class="title" href="https://fzofbih.org.ba/2026/07/17/javni-konkurs-za-dodjelu-sredstava-za-realizaciju-projekata-iz-podrucja-energijske-efikasnosti-za-2026-godinu-jk-ee-2026/" target="_blank" rel="noopener">JAVNI KONKURS za dodjelu sredstava za realizaciju projekata iz područja  energijske efikasnosti za 2026. godinu – JK EE 2026</a></li>
+</ul></div>
 </section>
 <section>
 <h2>15.07.2026</h2>
-<h3>Vlada Tuzlanskog kantona</h3><ul>
-<li><a class="title" href="https://vladatk.gov.ba/clanak/ponovljeni-konkurs-za-dodjelu-stipendija-ucenicima-iz-reda-branilacke-populacije-tuzlanskog-kantona-za-skolsku-20252026-godinu" target="_blank" rel="noopener">Ponovljeni konkurs za dodjelu stipendija učenicima iz reda branilačke populacije Tuzlanskog kantona  za školsku 2025/2026. godinu</a></li>
-</ul>
+<div class="pubgroup"><h3>Vlada Tuzlanskog kantona</h3><ul>
+<li data-publisher="Vlada Tuzlanskog kantona" data-topics="javni-pozivi"><a class="title" href="https://vladatk.gov.ba/clanak/ponovljeni-konkurs-za-dodjelu-stipendija-ucenicima-iz-reda-branilacke-populacije-tuzlanskog-kantona-za-skolsku-20252026-godinu" target="_blank" rel="noopener">Ponovljeni konkurs za dodjelu stipendija učenicima iz reda branilačke populacije Tuzlanskog kantona  za školsku 2025/2026. godinu</a></li>
+</ul></div>
 </section>
 <section>
 <h2>14.07.2026</h2>
-<h3>Vlada Tuzlanskog kantona</h3><ul>
-<li><a class="title" href="https://vladatk.gov.ba/clanak/javni-poziv-podrska-nedovoljno-razvijenim-nerazvijenim-i-izrazito-nerazvijenim-opcinama-za-2026-godinu" target="_blank" rel="noopener">Javni poziv - Podrška nedovoljno razvijenim, nerazvijenim i izrazito nerazvijenim općinama za 2026. godinu</a></li>
-</ul>
+<div class="pubgroup"><h3>Vlada Tuzlanskog kantona</h3><ul>
+<li data-publisher="Vlada Tuzlanskog kantona" data-topics="javni-pozivi"><a class="title" href="https://vladatk.gov.ba/clanak/javni-poziv-podrska-nedovoljno-razvijenim-nerazvijenim-i-izrazito-nerazvijenim-opcinama-za-2026-godinu" target="_blank" rel="noopener">Javni poziv - Podrška nedovoljno razvijenim, nerazvijenim i izrazito nerazvijenim općinama za 2026. godinu</a></li>
+</ul></div>
 </section>
 <section>
 <h2>09.07.2026</h2>
-<h3>Vlada Tuzlanskog kantona</h3><ul>
-<li><a class="title" href="https://vladatk.gov.ba/clanak/javni-oglas-za-prijem-namjestenika-u-radni-odnos-na-neodredeno-vrijeme-u-ministarstvu-poljoprivrede-sumarstva-i-vodoprivrede-tuzlanskog-kantona" target="_blank" rel="noopener">JAVNI OGLAS za prijem namještenika u radni odnos na neodređeno vrijeme u Ministarstvu poljoprivrede, šumarstva i vodoprivrede Tuzlanskog kantona</a></li>
-</ul>
+<div class="pubgroup"><h3>Vlada Tuzlanskog kantona</h3><ul>
+<li data-publisher="Vlada Tuzlanskog kantona" data-topics="javni-pozivi"><a class="title" href="https://vladatk.gov.ba/clanak/javni-oglas-za-prijem-namjestenika-u-radni-odnos-na-neodredeno-vrijeme-u-ministarstvu-poljoprivrede-sumarstva-i-vodoprivrede-tuzlanskog-kantona" target="_blank" rel="noopener">JAVNI OGLAS za prijem namještenika u radni odnos na neodređeno vrijeme u Ministarstvu poljoprivrede, šumarstva i vodoprivrede Tuzlanskog kantona</a></li>
+</ul></div>
 </section>
 <section>
 <h2>08.07.2026</h2>
-<h3>Vlada Tuzlanskog kantona</h3><ul>
-<li><a class="title" href="https://vladatk.gov.ba/clanak/ponovni-javni-poziv-za-kandidovanje-projekata-za-dodjelu-sredstava-vodnih-naknada-za-2026-godinu" target="_blank" rel="noopener">PONOVNI JAVNI POZIV za kandidovanje projekata za dodjelu sredstava vodnih naknada za 2026. godinu</a></li>
-</ul>
+<div class="pubgroup"><h3>Vlada Tuzlanskog kantona</h3><ul>
+<li data-publisher="Vlada Tuzlanskog kantona" data-topics="javni-pozivi"><a class="title" href="https://vladatk.gov.ba/clanak/ponovni-javni-poziv-za-kandidovanje-projekata-za-dodjelu-sredstava-vodnih-naknada-za-2026-godinu" target="_blank" rel="noopener">PONOVNI JAVNI POZIV za kandidovanje projekata za dodjelu sredstava vodnih naknada za 2026. godinu</a></li>
+</ul></div>
+</section>
+<section>
+<h2>07.07.2026</h2>
+<div class="pubgroup"><h3>FMKS (kultura i sport)</h3><ul>
+<li data-publisher="FMKS (kultura i sport)" data-topics="javni-pozivi"><a class="title" href="https://fmks.gov.ba/objavljeni-otvoreni-pozivi-za-prestizne-stipendijske-programe-vlade-sjedinjenih-americkih-drzava-2/" target="_blank" rel="noopener">Objavljeni otvoreni pozivi za prestižne stipendijske programe Vlade Sjedinjenih Američkih Država</a></li>
+</ul></div>
 </section>
 <section>
 <h2>30.06.2026</h2>
-<h3>FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)</h3><ul>
-<li><a class="title" href="https://fmpvs.gov.ba/2026/06/30/javni-oglas-za-prijem-pripravnika-u-federalno-ministarstvo-poljoprivrede-vodoprivrede-i-sumarstva/" target="_blank" rel="noopener">JAVNI OGLAS za prijem pripravnika u Federalno ministarstvo poljoprivrede, vodoprivrede i šumarstva</a></li>
-</ul>
-<h3>Grad Tuzla</h3><ul>
-<li><a class="title" href="https://grad.tuzla.ba/ka-siporeks-e-skola-b-malta-mejdan-siporeks-i-kb-siporeks-mejdan-b-malta-e-skola-siporeks/" target="_blank" rel="noopener">Ka (Siporeks – E.Škola – B.Malta – Mejdan – Siporeks) i Kb (Siporeks – Mejdan – B.Malta – E.Škola – Siporeks)</a></li>
-<li><a class="title" href="https://grad.tuzla.ba/zdravstveni-savjet-grada-tuzle-obiljezio-svjetski-dan-zdravlja/" target="_blank" rel="noopener">Zdravstveni savjet Grada Tuzle obilježio Svjetski dan zdravlja</a></li>
-</ul>
+<div class="pubgroup"><h3>FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)</h3><ul>
+<li data-publisher="FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)" data-topics="javni-pozivi"><a class="title" href="https://fmpvs.gov.ba/2026/06/30/javni-oglas-za-prijem-pripravnika-u-federalno-ministarstvo-poljoprivrede-vodoprivrede-i-sumarstva/" target="_blank" rel="noopener">JAVNI OGLAS za prijem pripravnika u Federalno ministarstvo poljoprivrede, vodoprivrede i šumarstva</a></li>
+</ul></div>
+</section>
+<section>
+<h2>23.06.2026</h2>
+<div class="pubgroup"><h3>FMKS (kultura i sport)</h3><ul>
+<li data-publisher="FMKS (kultura i sport)" data-topics="javni-pozivi"><a class="title" href="https://fmks.gov.ba/javni-poziv-za-izbor-koncepta-rada-komesara-i-kustosa-paviljona-bosne-i-hercegovine-na-20-venecijanskom-bijenalu-arhitekture-2027-godine/" target="_blank" rel="noopener">Javni poziv za izbor koncepta rada, komesara i kustosa Paviljona Bosne i Hercegovine na 20. Venecijanskom bijenalu arhitekture 2027. godine</a></li>
+</ul></div>
+</section>
+<section>
+<h2>09.06.2026</h2>
+<div class="pubgroup"><h3>FMKS (kultura i sport)</h3><ul>
+<li data-publisher="FMKS (kultura i sport)" data-topics="javni-pozivi"><a class="title" href="https://fmks.gov.ba/o-formalno-pravno-neispravnim-prijavama-na-javni-poziv-za-odabir-projekata-koji-ce-se-sufinansirati-iz-budzeta-federacije-bosne-i-hercegovine-u-2026-godini/" target="_blank" rel="noopener">Odluka o formalno-pravno neispravnim prijavama na Javni poziv za odabir projekata koji će se sufinansirati iz Budžeta Federacije Bosne i Hercegovine u 2026. godini</a></li>
+</ul></div>
 </section>
 <section>
 <h2>03.06.2026</h2>
-<h3>FMRPO (Federalno min. razvoja, poduzetništva i obrta)</h3><ul>
-<li><a class="title" href="https://fmrpo.gov.ba/ministar-mijatovic-potpisuje-ugovore-o-implementaciji-poticajnih-finansijskih-sredstava-u-okviru-programa-podrska-sektoru-male-privrede-s-ciljem-jacanja-konkurentnosti/" target="_blank" rel="noopener">MINISTAR MIJATOVIĆ POTPISUJE UGOVORE O IMPLEMENTACIJI POTICAJNIH FINANSIJSKIH SREDSTAVA U OKVIRU PROGRAMA “PODRŠKA SEKTORU MALE PRIVREDE S CILJEM JAČANJA KONKURENTNOSTI”</a></li>
-</ul>
+<div class="pubgroup"><h3>FMRPO (Federalno min. razvoja, poduzetništva i obrta)</h3><ul>
+<li data-publisher="FMRPO (Federalno min. razvoja, poduzetništva i obrta)" data-topics="javni-pozivi"><a class="title" href="https://fmrpo.gov.ba/ministar-mijatovic-potpisuje-ugovore-o-implementaciji-poticajnih-finansijskih-sredstava-u-okviru-programa-podrska-sektoru-male-privrede-s-ciljem-jacanja-konkurentnosti/" target="_blank" rel="noopener">MINISTAR MIJATOVIĆ POTPISUJE UGOVORE O IMPLEMENTACIJI POTICAJNIH FINANSIJSKIH SREDSTAVA U OKVIRU PROGRAMA “PODRŠKA SEKTORU MALE PRIVREDE S CILJEM JAČANJA KONKURENTNOSTI”</a></li>
+</ul></div>
 </section>
 <section>
 <h2>29.05.2026</h2>
-<h3>FMRPO (Federalno min. razvoja, poduzetništva i obrta)</h3><ul>
-<li><a class="title" href="https://fmrpo.gov.ba/konacna-lista-korisnika-grant-sredstava-sa-ekonomskog-koda-614500/" target="_blank" rel="noopener">Konačna lista korisnika grant sredstava – sa ekonomskog koda 614500</a></li>
-</ul>
+<div class="pubgroup"><h3>FMRPO (Federalno min. razvoja, poduzetništva i obrta)</h3><ul>
+<li data-publisher="FMRPO (Federalno min. razvoja, poduzetništva i obrta)" data-topics="javni-pozivi,rezultati"><a class="title" href="https://fmrpo.gov.ba/konacna-lista-korisnika-grant-sredstava-sa-ekonomskog-koda-614500/" target="_blank" rel="noopener">Konačna lista korisnika grant sredstava – sa ekonomskog koda 614500</a><span class="chip">rezultati</span></li>
+</ul></div>
 </section>
 <section>
 <h2>26.05.2026</h2>
-<h3>FMRPO (Federalno min. razvoja, poduzetništva i obrta)</h3><ul>
-<li><a class="title" href="https://fmrpo.gov.ba/objava-rezultata-igre-na-srecu-3/" target="_blank" rel="noopener">OBJAVA REZULTATA – IGRE NA SREĆU</a></li>
-</ul>
+<div class="pubgroup"><h3>FMRPO (Federalno min. razvoja, poduzetništva i obrta)</h3><ul>
+<li data-publisher="FMRPO (Federalno min. razvoja, poduzetništva i obrta)" data-topics="javni-pozivi,rezultati"><a class="title" href="https://fmrpo.gov.ba/objava-rezultata-igre-na-srecu-3/" target="_blank" rel="noopener">OBJAVA REZULTATA – IGRE NA SREĆU</a><span class="chip">rezultati</span></li>
+</ul></div>
 </section>
 <section>
 <h2>22.05.2026</h2>
-<h3>FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)</h3><ul>
-<li><a class="title" href="https://fmpvs.gov.ba/2026/05/22/obavjestenje-o-uslovima-i-rokovima-za-podnosenje-zahtjeva-za-podrsku-po-modelu-ruralnog-razvoja-u-2026-godini/" target="_blank" rel="noopener">OBAVJEŠTENJE o uslovima i rokovima za podnošenje zahtjeva za podršku po modelu ruralnog razvoja u 2026. godini</a></li>
-</ul>
+<div class="pubgroup"><h3>FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)</h3><ul>
+<li data-publisher="FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)" data-topics="javni-pozivi"><a class="title" href="https://fmpvs.gov.ba/2026/05/22/obavjestenje-o-uslovima-i-rokovima-za-podnosenje-zahtjeva-za-podrsku-po-modelu-ruralnog-razvoja-u-2026-godini/" target="_blank" rel="noopener">OBAVJEŠTENJE o uslovima i rokovima za podnošenje zahtjeva za podršku po modelu ruralnog razvoja u 2026. godini</a></li>
+</ul></div>
+</section>
+<section>
+<h2>19.05.2026</h2>
+<div class="pubgroup"><h3>FMKS (kultura i sport)</h3><ul>
+<li data-publisher="FMKS (kultura i sport)" data-topics="javni-pozivi"><a class="title" href="https://fmks.gov.ba/javni-poziv-2026-transfer-za-sport-od-znacaja-za-federaciju-potprogram-1-4-sufinansiranje-sportskih-udruzenja-i-klubova-osoba-sa-invaliditetom/" target="_blank" rel="noopener">JAVNI POZIV 2026: Transfer za sport od značaja za Federaciju – potprogram 1.4. Sufinansiranje sportskih udruženja i klubova osoba sa invaliditetom</a></li>
+</ul></div>
+</section>
+<section>
+<h2>15.05.2026</h2>
+<div class="pubgroup"><h3>FMKS (kultura i sport)</h3><ul>
+<li data-publisher="FMKS (kultura i sport)" data-topics="javni-pozivi"><a class="title" href="https://fmks.gov.ba/javni-poziv-2026-kapitalni-transferi-neprofitnim-organizacijama-izgradnja-adaptacija-i-rekonstrukcija-kulturnog-i-graditeljskog-naslijedja-3/" target="_blank" rel="noopener">JAVNI POZIV 2026: Kapitalni transferi neprofitnim organizacijama – Izgradnja, adaptacija i rekonstrukcija kulturnog i graditeljskog naslijeđa</a></li>
+</ul></div>
+</section>
+<section>
+<h2>14.05.2026</h2>
+<div class="pubgroup"><h3>FMKS (kultura i sport)</h3><ul>
+<li data-publisher="FMKS (kultura i sport)" data-topics="javni-pozivi"><a class="title" href="https://fmks.gov.ba/odluka-o-djelimicnom-ponistavanju-javnog-poziva-za-odabir-projekata-koji-ce-se-sufinansirati-iz-budzeta-federacije-bih-u-2026-godini-transfer-za-sport-od-znacaja-za-federaciju-bih/" target="_blank" rel="noopener">Odluka o djelimičnom poništavanju Javnog poziva za odabir projekata koji će se sufinansirati iz Budžeta Federacije BiH u 2026. godini – Transfer za sport od značaja za Federaciju BiH</a></li>
+</ul></div>
 </section>
 <section>
 <h2>28.04.2026</h2>
-<h3>FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)</h3><ul>
-<li><a class="title" href="https://fmpvs.gov.ba/2026/04/28/request-for-expressions-of-interest-consulting-services-individual-selection/" target="_blank" rel="noopener">REQUEST FOR EXPRESSIONS OF INTEREST  CONSULTING SERVICES – INDIVIDUAL SELECTION</a></li>
-</ul>
+<div class="pubgroup"><h3>FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)</h3><ul>
+<li data-publisher="FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)" data-topics="javni-pozivi"><a class="title" href="https://fmpvs.gov.ba/2026/04/28/request-for-expressions-of-interest-consulting-services-individual-selection/" target="_blank" rel="noopener">REQUEST FOR EXPRESSIONS OF INTEREST  CONSULTING SERVICES – INDIVIDUAL SELECTION</a></li>
+</ul></div>
 </section>
 <section>
 <h2>22.04.2026</h2>
-<h3>FMRPO (Federalno min. razvoja, poduzetništva i obrta)</h3><ul>
-<li><a class="title" href="https://fmrpo.gov.ba/obrazac-izvjestaja-o-namjenskom-utrosku-finansijskih-sredstava-za-projekte-izgradnja-poduzetnickih-zona-unapredenje-institucijske-poduzetnicke-infrastrukture-i/" target="_blank" rel="noopener">OBRAZAC IZVJEŠTAJA O NAMJENSKOM UTROŠKU FINANSIJSKIH SREDSTAVA ZA PROJEKTE: „IZGRADNJA PODUZETNIČKIH ZONA“, „UNAPREĐENJE INSTITUCIJSKE PODUZETNIČKE INFRASTRUKTURE“ I „POTICAJ KOMORAMA“</a></li>
-</ul>
+<div class="pubgroup"><h3>FMRPO (Federalno min. razvoja, poduzetništva i obrta)</h3><ul>
+<li data-publisher="FMRPO (Federalno min. razvoja, poduzetništva i obrta)" data-topics="javni-pozivi"><a class="title" href="https://fmrpo.gov.ba/obrazac-izvjestaja-o-namjenskom-utrosku-finansijskih-sredstava-za-projekte-izgradnja-poduzetnickih-zona-unapredenje-institucijske-poduzetnicke-infrastrukture-i/" target="_blank" rel="noopener">OBRAZAC IZVJEŠTAJA O NAMJENSKOM UTROŠKU FINANSIJSKIH SREDSTAVA ZA PROJEKTE: „IZGRADNJA PODUZETNIČKIH ZONA“, „UNAPREĐENJE INSTITUCIJSKE PODUZETNIČKE INFRASTRUKTURE“ I „POTICAJ KOMORAMA“</a></li>
+</ul></div>
 </section>
 <section>
 <h2>19.04.2026</h2>
-<h3>FMRPO (Federalno min. razvoja, poduzetništva i obrta)</h3><ul>
-<li><a class="title" href="https://fmrpo.gov.ba/vlada-fbih-utvrdila-konacne-liste-skoro-sest-miliona-km-grant-sredstava-za-podrsku-sektoru-male-privrede/" target="_blank" rel="noopener">VLADA FBiH UTVRDILA KONAČNE LISTE: SKORO ŠEST MILIONA KM GRANT SREDSTAVA ZA PODRŠKU SEKTORU MALE PRIVREDE</a></li>
-</ul>
+<div class="pubgroup"><h3>FMRPO (Federalno min. razvoja, poduzetništva i obrta)</h3><ul>
+<li data-publisher="FMRPO (Federalno min. razvoja, poduzetništva i obrta)" data-topics="javni-pozivi,rezultati"><a class="title" href="https://fmrpo.gov.ba/vlada-fbih-utvrdila-konacne-liste-skoro-sest-miliona-km-grant-sredstava-za-podrsku-sektoru-male-privrede/" target="_blank" rel="noopener">VLADA FBiH UTVRDILA KONAČNE LISTE: SKORO ŠEST MILIONA KM GRANT SREDSTAVA ZA PODRŠKU SEKTORU MALE PRIVREDE</a><span class="chip">rezultati</span></li>
+</ul></div>
 </section>
 <section>
 <h2>31.03.2026</h2>
-<h3>FMRPO (Federalno min. razvoja, poduzetništva i obrta)</h3><ul>
-<li><a class="title" href="https://fmrpo.gov.ba/potencijalna-rang-lista-korisnika-za-projekat-br-1-izgradnja-poduzetnickih-zona-i-projekat-br-2-unapredenje-institucijske-poduzetnicke-infrastrukture/" target="_blank" rel="noopener">POTENCIJALNA RANG LISTA KORISNIKA ZA PROJEKAT BR. 1: „IZGRADNJA PODUZETNIČKIH ZONA“ I PROJEKAT BR. 2: „UNAPREĐENJE INSTITUCIJSKE PODUZETNIČKE INFRASTRUKTURE“</a></li>
-</ul>
+<div class="pubgroup"><h3>FMRPO (Federalno min. razvoja, poduzetništva i obrta)</h3><ul>
+<li data-publisher="FMRPO (Federalno min. razvoja, poduzetništva i obrta)" data-topics="javni-pozivi,rezultati"><a class="title" href="https://fmrpo.gov.ba/potencijalna-rang-lista-korisnika-za-projekat-br-1-izgradnja-poduzetnickih-zona-i-projekat-br-2-unapredenje-institucijske-poduzetnicke-infrastrukture/" target="_blank" rel="noopener">POTENCIJALNA RANG LISTA KORISNIKA ZA PROJEKAT BR. 1: „IZGRADNJA PODUZETNIČKIH ZONA“ I PROJEKAT BR. 2: „UNAPREĐENJE INSTITUCIJSKE PODUZETNIČKE INFRASTRUKTURE“</a><span class="chip">rezultati</span></li>
+</ul></div>
 </section>
 <section>
 <h2>27.02.2026</h2>
-<h3>FMRPO (Federalno min. razvoja, poduzetništva i obrta)</h3><ul>
-<li><a class="title" href="https://fmrpo.gov.ba/javni-konkurs-za-finansiranje-programa-i-projekata-iz-dijela-prihoda-ostvarenih-po-osnovu-naknada-za-priredivanje-igara-na-srecu-iz-2025-godine/" target="_blank" rel="noopener">JAVNI KONKURS ZA FINANSIRANJE PROGRAMA I PROJEKATA IZ DIJELA PRIHODA OSTVARENIH PO OSNOVU NAKNADA ZA PRIREĐIVANJE IGARA NA SREĆU IZ 2025. GODINE</a></li>
-</ul>
+<div class="pubgroup"><h3>FMRPO (Federalno min. razvoja, poduzetništva i obrta)</h3><ul>
+<li data-publisher="FMRPO (Federalno min. razvoja, poduzetništva i obrta)" data-topics="javni-pozivi"><a class="title" href="https://fmrpo.gov.ba/javni-konkurs-za-finansiranje-programa-i-projekata-iz-dijela-prihoda-ostvarenih-po-osnovu-naknada-za-priredivanje-igara-na-srecu-iz-2025-godine/" target="_blank" rel="noopener">JAVNI KONKURS ZA FINANSIRANJE PROGRAMA I PROJEKATA IZ DIJELA PRIHODA OSTVARENIH PO OSNOVU NAKNADA ZA PRIREĐIVANJE IGARA NA SREĆU IZ 2025. GODINE</a></li>
+</ul></div>
 </section>
 <section>
 <h2>20.02.2026</h2>
-<h3>FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)</h3><ul>
-<li><a class="title" href="https://fmpvs.gov.ba/2026/02/20/poziv-za-kandidovanje-projekata-u-program-javnih-investicija-federacije-bosne-i-hercegovine-2027-2029-i-popunjavanje-ip-obrazaca-u-pimis-sistemu/" target="_blank" rel="noopener">Poziv za kandidovanje projekata u Program javnih investicija Federacije Bosne i Hercegovine 2027-2029. i Zahtjev za popunjavanje IP obrazaca</a></li>
-</ul>
+<div class="pubgroup"><h3>FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)</h3><ul>
+<li data-publisher="FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)" data-topics="javni-pozivi"><a class="title" href="https://fmpvs.gov.ba/2026/02/20/poziv-za-kandidovanje-projekata-u-program-javnih-investicija-federacije-bosne-i-hercegovine-2027-2029-i-popunjavanje-ip-obrazaca-u-pimis-sistemu/" target="_blank" rel="noopener">Poziv za kandidovanje projekata u Program javnih investicija Federacije Bosne i Hercegovine 2027-2029. i Zahtjev za popunjavanje IP obrazaca</a></li>
+</ul></div>
 </section>
 <section>
 <h2>18.02.2026</h2>
-<h3>FMRPO (Federalno min. razvoja, poduzetništva i obrta)</h3><ul>
-<li><a class="title" href="https://fmrpo.gov.ba/javni-konkurs-za-grant-sredstva-u-2026-godini/" target="_blank" rel="noopener">JAVNI KONKURS ZA GRANT SREDSTVA U 2026. GODINI</a></li>
-</ul>
+<div class="pubgroup"><h3>FMRPO (Federalno min. razvoja, poduzetništva i obrta)</h3><ul>
+<li data-publisher="FMRPO (Federalno min. razvoja, poduzetništva i obrta)" data-topics="javni-pozivi"><a class="title" href="https://fmrpo.gov.ba/javni-konkurs-za-grant-sredstva-u-2026-godini/" target="_blank" rel="noopener">JAVNI KONKURS ZA GRANT SREDSTVA U 2026. GODINI</a></li>
+</ul></div>
 </section>
 <section>
 <h2>17.12.2025</h2>
-<h3>FMRPO (Federalno min. razvoja, poduzetništva i obrta)</h3><ul>
-<li><a class="title" href="https://fmrpo.gov.ba/javni-konkurs-za-odabir-korisnika-kreditnih-sredstava-po-programu-kreditni-poticaj-razvoja-poduzetnistva-i-obrta-za-2025-godinu-2/" target="_blank" rel="noopener">JAVNI KONKURS ZA ODABIR KORISNIKA KREDITNIH SREDSTAVA PO PROGRAMU “KREDITNI POTICAJ RAZVOJA, PODUZETNIŠTVA I OBRTA” ZA 2025. GODINU</a></li>
-</ul>
+<div class="pubgroup"><h3>FMRPO (Federalno min. razvoja, poduzetništva i obrta)</h3><ul>
+<li data-publisher="FMRPO (Federalno min. razvoja, poduzetništva i obrta)" data-topics="javni-pozivi"><a class="title" href="https://fmrpo.gov.ba/javni-konkurs-za-odabir-korisnika-kreditnih-sredstava-po-programu-kreditni-poticaj-razvoja-poduzetnistva-i-obrta-za-2025-godinu-2/" target="_blank" rel="noopener">JAVNI KONKURS ZA ODABIR KORISNIKA KREDITNIH SREDSTAVA PO PROGRAMU “KREDITNI POTICAJ RAZVOJA, PODUZETNIŠTVA I OBRTA” ZA 2025. GODINU</a></li>
+</ul></div>
 </section>
 <section>
 <h2>29.10.2025</h2>
-<h3>FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)</h3><ul>
-<li><a class="title" href="https://fmpvs.gov.ba/2025/10/29/javni-poziv-za-izbor-i-angazman-konsultanata-na-pozicije-u-okviru-tima-za-implementaciju-projekta-modernizacije-vodnih-i-sanitarnih-usluga/" target="_blank" rel="noopener">Javni poziv za izbor i angažman konsultanata na pozicije u okviru tima za implementaciju Projekta modernizacije vodnih i sanitarnih usluga</a></li>
-</ul>
+<div class="pubgroup"><h3>FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)</h3><ul>
+<li data-publisher="FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)" data-topics="javni-pozivi"><a class="title" href="https://fmpvs.gov.ba/2025/10/29/javni-poziv-za-izbor-i-angazman-konsultanata-na-pozicije-u-okviru-tima-za-implementaciju-projekta-modernizacije-vodnih-i-sanitarnih-usluga/" target="_blank" rel="noopener">Javni poziv za izbor i angažman konsultanata na pozicije u okviru tima za implementaciju Projekta modernizacije vodnih i sanitarnih usluga</a></li>
+</ul></div>
 </section>
 <section>
 <h2>13.10.2025</h2>
-<h3>FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)</h3><ul>
-<li><a class="title" href="https://fmpvs.gov.ba/2025/10/13/javni-poziv-za-prijavu-ustanova-za-vrsenje-obuke-ogovornih-lica-za-promet-fitofarmaceutskim-sredstvima-na-teritoriji-federacije-bosne-i-hercegovine/" target="_blank" rel="noopener">Javni poziv za prijavu ustanova za vršenje obuke ogovornih lica za promet fitofarmaceutskim sredstvima na teritoriji Federacije Bosne i Hercegovine</a></li>
-</ul>
+<div class="pubgroup"><h3>FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)</h3><ul>
+<li data-publisher="FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)" data-topics="javni-pozivi"><a class="title" href="https://fmpvs.gov.ba/2025/10/13/javni-poziv-za-prijavu-ustanova-za-vrsenje-obuke-ogovornih-lica-za-promet-fitofarmaceutskim-sredstvima-na-teritoriji-federacije-bosne-i-hercegovine/" target="_blank" rel="noopener">Javni poziv za prijavu ustanova za vršenje obuke ogovornih lica za promet fitofarmaceutskim sredstvima na teritoriji Federacije Bosne i Hercegovine</a></li>
+</ul></div>
+</section>
+<section>
+<h2>16.09.2025</h2>
+<div class="pubgroup"><h3>Fond za zaštitu okoliša FBiH</h3><ul>
+<li data-publisher="Fond za zaštitu okoliša FBiH" data-topics="javni-pozivi"><a class="title" href="https://fzofbih.org.ba/2025/09/16/fond-za-zastitu-okolisa-fbih-otvorio-novi-javni-natjecaj-prilika-za-projekte-reciklaze-i-zastite-voda/" target="_blank" rel="noopener">Fond za zaštitu okoliša FBiH otvorio novi Javni natječaj – prilika za projekte reciklaže i zaštite voda</a></li>
+</ul></div>
 </section>
 <section>
 <h2>12.09.2025</h2>
-<h3>FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)</h3><ul>
-<li><a class="title" href="https://fmpvs.gov.ba/2025/09/12/javni-poziv-za-angaziranje-eksperata-fizickih-osoba-za-pruzanje-konsultantskih-usluga-u-okviru-projekta-zene-pokretacice-razvoja-u-poljoprivredi-i-ruralnim-sredinama/" target="_blank" rel="noopener">JAVNI POZIV za angažiranje eksperata – fizičkih osoba za pružanje konsultantskih usluga u okviru projekta “Žene pokretačice razvoja u poljoprivredi i ruralnim sredinama”</a></li>
-</ul>
+<div class="pubgroup"><h3>FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)</h3><ul>
+<li data-publisher="FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)" data-topics="javni-pozivi"><a class="title" href="https://fmpvs.gov.ba/2025/09/12/javni-poziv-za-angaziranje-eksperata-fizickih-osoba-za-pruzanje-konsultantskih-usluga-u-okviru-projekta-zene-pokretacice-razvoja-u-poljoprivredi-i-ruralnim-sredinama/" target="_blank" rel="noopener">JAVNI POZIV za angažiranje eksperata – fizičkih osoba za pružanje konsultantskih usluga u okviru projekta “Žene pokretačice razvoja u poljoprivredi i ruralnim sredinama”</a></li>
+</ul></div>
 </section>
 <section>
 <h2>15.08.2025</h2>
-<h3>FMRPO (Federalno min. razvoja, poduzetništva i obrta)</h3><ul>
-<li><a class="title" href="https://fmrpo.gov.ba/obavijest-o-konacnim-rezultatima-uredbe-o-mjerama-finansijske-pomoci-privatnim-poslodavcima-obrtima-i-ostalim-samostalnim-djelatnostima-u-federaciji-bosne-i-hercegovine-u-cilju-odrzavanja-postojecih-4/" target="_blank" rel="noopener">OBAVIJEST O KONAČNIM REZULTATIMA UREDBE O MJERAMA FINANSIJSKE POMOĆI PRIVATNIM POSLODAVCIMA, OBRTIMA I OSTALIM SAMOSTALNIM DJELATNOSTIMA U FEDERACIJI BOSNE I HERCEGOVINE U CILJU ODRŽAVANJA POSTOJEĆIH RADNIH MJESTA ZA 2025. GODINU ZA JUNI 2025.</a></li>
-</ul>
+<div class="pubgroup"><h3>FMRPO (Federalno min. razvoja, poduzetništva i obrta)</h3><ul>
+<li data-publisher="FMRPO (Federalno min. razvoja, poduzetništva i obrta)" data-topics="javni-pozivi,rezultati"><a class="title" href="https://fmrpo.gov.ba/obavijest-o-konacnim-rezultatima-uredbe-o-mjerama-finansijske-pomoci-privatnim-poslodavcima-obrtima-i-ostalim-samostalnim-djelatnostima-u-federaciji-bosne-i-hercegovine-u-cilju-odrzavanja-postojecih-4/" target="_blank" rel="noopener">OBAVIJEST O KONAČNIM REZULTATIMA UREDBE O MJERAMA FINANSIJSKE POMOĆI PRIVATNIM POSLODAVCIMA, OBRTIMA I OSTALIM SAMOSTALNIM DJELATNOSTIMA U FEDERACIJI BOSNE I HERCEGOVINE U CILJU ODRŽAVANJA POSTOJEĆIH RADNIH MJESTA ZA 2025. GODINU ZA JUNI 2025.</a><span class="chip">rezultati</span></li>
+</ul></div>
 </section>
 <section>
 <h2>17.07.2025</h2>
-<h3>FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)</h3><ul>
-<li><a class="title" href="https://fmpvs.gov.ba/2025/07/17/javni-poziv-o-podnosenju-zahtjeva-za-ostvarivanje-prava-na-grant-sredstva-ekonomskog-osnazivanja-zena-u-ruralnim-podrucjima-za-2025-godinu/" target="_blank" rel="noopener">JAVNI POZIV o podnošenju zahtjeva za ostvarivanje prava na grant sredstva ekonomskog osnaživanja žena u ruralnim područjima za 2025. godinu</a></li>
-</ul>
+<div class="pubgroup"><h3>FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)</h3><ul>
+<li data-publisher="FMPVS (Federalno min. poljoprivrede, vodoprivrede i šumarstva)" data-topics="javni-pozivi"><a class="title" href="https://fmpvs.gov.ba/2025/07/17/javni-poziv-o-podnosenju-zahtjeva-za-ostvarivanje-prava-na-grant-sredstva-ekonomskog-osnazivanja-zena-u-ruralnim-podrucjima-za-2025-godinu/" target="_blank" rel="noopener">JAVNI POZIV o podnošenju zahtjeva za ostvarivanje prava na grant sredstva ekonomskog osnaživanja žena u ruralnim područjima za 2025. godinu</a></li>
+</ul></div>
 </section>
 <section>
 <h2>08.08.2024</h2>
-<h3>Vlada Federacije BiH</h3><ul>
-<li><a class="title" href="https://fbihvlada.gov.ba/bs/odluka-o-ponistenju-postupka-javne-nabavke-roba-nabavka-licenci-za-potrebe-generalnog-sekretarijata-vlade-fbih-23387" target="_blank" rel="noopener">Odluka o poništenju  postupka javne nabavke  roba – nabavka licenci za potrebe Generalnog sekretarijata Vlade FBiH</a><div class="also">također na: <a href="https://fmrpo.gov.ba/odluka-o-ponistenju-postupka-javne-nabavke-usluga/" target="_blank" rel="noopener">FMRPO (Federalno min. razvoja, poduzetništva i obrta)</a></div></li>
-</ul>
+<div class="pubgroup"><h3>Vlada Federacije BiH</h3><ul>
+<li data-publisher="Vlada Federacije BiH" data-topics="javni-pozivi,rezultati"><a class="title" href="https://fbihvlada.gov.ba/bs/odluka-o-ponistenju-postupka-javne-nabavke-roba-nabavka-licenci-za-potrebe-generalnog-sekretarijata-vlade-fbih-23387" target="_blank" rel="noopener">Odluka o poništenju  postupka javne nabavke  roba – nabavka licenci za potrebe Generalnog sekretarijata Vlade FBiH</a><span class="chip">rezultati</span><div class="also">također na: <a href="https://fmrpo.gov.ba/odluka-o-ponistenju-postupka-javne-nabavke-usluga/" target="_blank" rel="noopener">FMRPO (Federalno min. razvoja, poduzetništva i obrta)</a></div></li>
+</ul></div>
+</section>
+<section>
+<h2>06.04.2024</h2>
+<div class="pubgroup"><h3>Fond za zaštitu okoliša FBiH</h3><ul>
+<li data-publisher="Fond za zaštitu okoliša FBiH" data-topics="javni-pozivi"><a class="title" href="https://fzofbih.org.ba/2026/04/02/javni-konkurs/" target="_blank" rel="noopener">JAVNI KONKURS za dodjelu sredstava za realizaciju programa, projekata i sličnih aktivnosti iz područja zaštite okoliša za 2026. godinu</a></li>
+</ul></div>
+</section>
+<section>
+<h2>15.02.2024</h2>
+<div class="pubgroup"><h3>Fond za zaštitu okoliša FBiH</h3><ul>
+<li data-publisher="Fond za zaštitu okoliša FBiH" data-topics="javni-pozivi"><a class="title" href="https://fzofbih.org.ba/2024/08/02/javni-poziv-za-dodjelu-sredstava-iz-budzetske-podrske-eu-za-provodjenje-mjera-energijske-efikasnosti-u-stambenim-objektima-jp-bpeu-ss-2024-1/" target="_blank" rel="noopener">JAVNI POZIV za dodjelu sredstava iz budžetske podrške EU za provođenje mjera energijske efikasnosti u stambenim objektima – JP BPEU SS 2024-1</a></li>
+</ul></div>
+</section>
+<section>
+<h2>21.11.2023</h2>
+<div class="pubgroup"><h3>Fond za zaštitu okoliša FBiH</h3><ul>
+<li data-publisher="Fond za zaštitu okoliša FBiH" data-topics="javni-pozivi,rezultati"><a class="title" href="https://fzofbih.org.ba/2023/11/21/odluka-o-dodjeli-sredstava-jp-bpeu-ss-2023-1-za-redne-brojeve-127-230/" target="_blank" rel="noopener">Odluka o dodjeli sredstava JP BPEU SS 2023-1 za redne brojeve 127-230</a><span class="chip">rezultati</span></li>
+<li data-publisher="Fond za zaštitu okoliša FBiH" data-topics="javni-pozivi"><a class="title" href="https://fzofbih.org.ba/2023/11/21/pojasnjenje-za-javni-poziv-jp-bpeu-mmsp-2023-1/" target="_blank" rel="noopener">Pojašnjenje za Javni poziv JP BPEU MMSP 2023-1</a></li>
+</ul></div>
+</section>
+<section>
+<h2>03.11.2023</h2>
+<div class="pubgroup"><h3>Fond za zaštitu okoliša FBiH</h3><ul>
+<li data-publisher="Fond za zaštitu okoliša FBiH" data-topics="javni-pozivi"><a class="title" href="https://fzofbih.org.ba/2023/11/03/javni-poziv-za-stambene-objekte/" target="_blank" rel="noopener">JAVNI POZIV za stambene objekte</a></li>
+</ul></div>
 </section>
 <section>
 <h2>15.04.2021</h2>
-<h3>Grad Tuzla</h3><ul>
-<li><a class="title" href="https://grad.tuzla.ba/wp-content/uploads/2020/06/Javni-oglas-subvencija-kamate-za-mlade-2021.godinu.pdf" target="_blank" rel="noopener">Javni oglas za podnošenje prijava za odobravanje novčanih sredstava na ime subvencije kamate za rješavanje stambenog pitanja mladih</a></li>
-<li><a class="title" href="https://grad.tuzla.ba/wp-content/uploads/2020/06/Izjave-i-prijavni-obrazac.pdf" target="_blank" rel="noopener">-Izjave i prijavni obrazac</a></li>
-</ul>
+<div class="pubgroup"><h3>Grad Tuzla</h3><ul>
+<li data-publisher="Grad Tuzla" data-topics="javni-pozivi"><a class="title" href="https://grad.tuzla.ba/wp-content/uploads/2020/06/Javni-oglas-subvencija-kamate-za-mlade-2021.godinu.pdf" target="_blank" rel="noopener">Javni oglas za podnošenje prijava za odobravanje novčanih sredstava na ime subvencije kamate za rješavanje stambenog pitanja mladih</a></li>
+</ul></div>
 </section>
 <section>
 <h2>09.04.2021</h2>
-<h3>Grad Tuzla</h3><ul>
-<li><a class="title" href="https://grad.tuzla.ba/wp-content/uploads/2020/06/Javni-konkurs-za-predlaganje-dobitnika-javnih-priznanja-u-2021.-godini-u-povodu-obilježavanja-sljedećih-značajnih-datuma-iz-historije-Tuzle-i-Bosne-i-Hercegovine.pdf" target="_blank" rel="noopener">Javni konkurs za predlaganje dobitnika javnih priznanja u 2021. godini u povodu obilježavanja  značajnih datuma iz historije Tuzle i Bosne i Hercegovine(četvrti april, deveti maj i petnaesti maj)</a></li>
-</ul>
+<div class="pubgroup"><h3>Grad Tuzla</h3><ul>
+<li data-publisher="Grad Tuzla" data-topics="javni-pozivi"><a class="title" href="https://grad.tuzla.ba/wp-content/uploads/2020/06/Javni-konkurs-za-predlaganje-dobitnika-javnih-priznanja-u-2021.-godini-u-povodu-obilježavanja-sljedećih-značajnih-datuma-iz-historije-Tuzle-i-Bosne-i-Hercegovine.pdf" target="_blank" rel="noopener">Javni konkurs za predlaganje dobitnika javnih priznanja u 2021. godini u povodu obilježavanja  značajnih datuma iz historije Tuzle i Bosne i Hercegovine(četvrti april, deveti maj i petnaesti maj)</a></li>
+</ul></div>
 </section>
 <section>
 <h2>01.04.2021</h2>
-<h3>Grad Tuzla</h3><ul>
-<li><a class="title" href="https://grad.tuzla.ba/wp-content/uploads/2020/06/PONOVNI-Javni-oglas-za-prodaju-vatrogasnih-vozila.pdf" target="_blank" rel="noopener">Ponovni Javni oglas za prodaju rabljenih vatrogasnih motornih vozila u vlasništvu Grada Tuzle</a></li>
-</ul>
+<div class="pubgroup"><h3>Grad Tuzla</h3><ul>
+<li data-publisher="Grad Tuzla" data-topics="javni-pozivi"><a class="title" href="https://grad.tuzla.ba/wp-content/uploads/2020/06/PONOVNI-Javni-oglas-za-prodaju-vatrogasnih-vozila.pdf" target="_blank" rel="noopener">Ponovni Javni oglas za prodaju rabljenih vatrogasnih motornih vozila u vlasništvu Grada Tuzle</a></li>
+</ul></div>
 </section>
 </main><script>
 const box = document.getElementById('search');
-box.addEventListener('input', () => {
+const pubSel = document.getElementById('pub');
+let activeTopic = '';
+
+function apply() {
   const q = box.value.toLowerCase();
+  const pub = pubSel.value;
   document.querySelectorAll('li').forEach(li => {
-    li.style.display = li.textContent.toLowerCase().includes(q) ? '' : 'none';
+    const okText = li.textContent.toLowerCase().includes(q);
+    const okPub = !pub || li.dataset.publisher === pub;
+    const okTopic = !activeTopic ||
+      li.dataset.topics.split(',').includes(activeTopic);
+    li.style.display = okText && okPub && okTopic ? '' : 'none';
+  });
+  document.querySelectorAll('.pubgroup').forEach(g => {
+    const any = [...g.querySelectorAll('li')].some(li => li.style.display !== 'none');
+    g.style.display = any ? '' : 'none';
   });
   document.querySelectorAll('section').forEach(sec => {
     const any = [...sec.querySelectorAll('li')].some(li => li.style.display !== 'none');
     sec.style.display = any ? '' : 'none';
+  });
+}
+
+box.addEventListener('input', apply);
+pubSel.addEventListener('change', apply);
+document.querySelectorAll('.tchip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    activeTopic = chip.dataset.topic === activeTopic ? '' : chip.dataset.topic;
+    document.querySelectorAll('.tchip').forEach(c =>
+      c.classList.toggle('active', c.dataset.topic === activeTopic));
+    apply();
   });
 });
 </script></body></html>
